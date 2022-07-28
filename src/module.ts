@@ -8,9 +8,9 @@ import {
 import serialize from 'serialize-javascript';
 import { pascalCase, kebabCase } from 'scule';
 import { name, version } from '../package.json';
-import type { VueSelectModuleOptions } from './options';
+import type { ModuleOptions } from './options';
 
-export default defineNuxtModule<VueSelectModuleOptions>({
+export default defineNuxtModule<ModuleOptions>({
   meta: {
     name,
     version,
@@ -77,4 +77,4 @@ export default defineNuxtModule<VueSelectModuleOptions>({
 
 export * from 'vue-select';
 
-export type { VueSelectModuleOptions };
+export type { ModuleOptions };

@@ -1,7 +1,7 @@
 import type { App } from 'vue';
 import type { VueSelectConstructor } from 'vue-select';
 
-export interface VueSelectModuleOptions {
+export interface ModuleOptions {
   component?: {
     /*
     * @default `VSelect`

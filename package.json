@@ -17,6 +17,14 @@
   "files": [
     "dist"
   ],
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
   "scripts": {
     "build": "nuxt-module-build",
     "dev": "nuxi dev playground",
