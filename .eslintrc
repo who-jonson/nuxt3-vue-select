@@ -1,0 +1,43 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": [
+    "@nuxtjs/eslint-config-typescript"
+  ],
+  "rules": {
+    "@typescript-eslint/comma-dangle": [ 2, "never" ],
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/semi": [ "error", "always" ],
+    "@typescript-eslint/space-before-function-paren": "off",
+    "import/no-mutable-exports": "off",
+    "import/no-named-as-default": "off",
+    "keyword-spacing": [ "error", { "before": true, "after": true } ],
+    "quotes": [ 2, "single", { "avoidEscape": true, "allowTemplateLiterals": true } ],
+    "space-before-function-paren": [ "error", "never" ],
+    "semi": "off",
+    "no-console": "off",
+    "no-redeclare": "off",
+    "no-unused-vars": "off",
+    "require-await": "off",
+    "no-mixed-spaces-and-tabs": "off",
+    "vue/attribute-hyphenation": [ "error", "always" ],
+    "vue/multi-word-component-names": "off",
+    "vue/no-unused-vars": "off",
+    "vue/no-setup-props-destructure": "off",
+    "vue/no-unused-components": "off",
+    "vue/require-component-is": "off",
+    "vue/max-attributes-per-line": [ "error", {
+      "singleline": { "max": 4 },
+      "multiline": { "max": 3 }
+    } ],
+    "comma-dangle": [ 2, "never" ]
+  }
+}
