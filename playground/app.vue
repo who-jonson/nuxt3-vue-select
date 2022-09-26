@@ -1,32 +1,9 @@
-<template>
-  <div>
-    <h1>Vue Select - Ajax</h1>
-    <VSelect label="name" :filterable="false" :options="options" @search="onSearch">
-      <template slot="no-options">
-        type to search GitHub repositories..
-      </template>
-      <template #option="option">
-        <div class="d-center">
-          <img :src="option.owner.avatar_url">
-          {{ option.full_name }}
-        </div>
-      </template>
-      <template #selected-option="option">
-        <div class="selected d-center">
-          <img :src="option.owner.avatar_url">
-          {{ option.full_name }}
-        </div>
-      </template>
-    </VSelect>
-  </div>
-</template>
-
 <script lang="ts" setup>
 import { debounce } from '@whoj/utils-core';
 
 const instance = getCurrentInstance();
 
-const options = ref<{[p: string]: any}[]>([]);
+const options = ref<{ [p: string]: any, }[]>([]);
 
 const search = debounce(350, (loading, search, vm) => {
   fetch(
@@ -44,3 +21,26 @@ function onSearch(src, loading) {
   }
 }
 </script>
+
+<template>
+  <div>
+    <h1>Vue Select - Ajax</h1>
+    <VSelect label="name" :filterable="false" :options="options" @search="onSearch">
+      <template #no-options>
+        type to search GitHub repositories..
+      </template>
+      <template #option="option">
+        <div class="d-center">
+          <img :src="option.owner.avatar_url">
+          {{ option.full_name }}
+        </div>
+      </template>
+      <template #selected-option="option">
+        <div class="selected d-center">
+          <img :src="option.owner.avatar_url">
+          {{ option.full_name }}
+        </div>
+      </template>
+    </VSelect>
+  </div>
+</template>

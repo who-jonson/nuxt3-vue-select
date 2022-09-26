@@ -1,9 +1,9 @@
-import { defineNuxtConfig } from 'nuxt';
-import VueSelectModule from '..';
+import { defineNuxtConfig } from 'nuxt/config';
+// import VueSelectModule from '..';
 
 export default defineNuxtConfig({
   modules: [
-    VueSelectModule
+    '@whoj/nuxt3-vue-select'
   ],
   vSelect: {
     component: {
