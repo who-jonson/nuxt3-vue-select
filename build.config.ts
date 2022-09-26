@@ -3,11 +3,19 @@ import { defineBuildConfig } from 'unbuild';
 export default defineBuildConfig({
   clean: true,
   declaration: true,
-  entries: [
-    // 'src/options'
+  externals: [
+    'vue',
+    'scule',
+    'vue-demi',
+    'vue-select'
   ],
   outDir: 'dist',
   rollup: {
+    emitCJS: false,
+    cjsBridge: true,
+    commonjs: {
+      include: /node_modules/
+    },
     esbuild: {
       treeShaking: true
     }

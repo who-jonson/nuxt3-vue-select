@@ -6,19 +6,17 @@ export interface ModuleOptions {
     /*
     * @default `VSelect`
     **/
-    as?: string;
+    as?: string,
 
     /*
     * @default `true`
     **/
-    globalRegister?: boolean;
+    globalRegister?: boolean,
 
     /*
     * @default `true`
     **/
-    includeCss?: true
+    includeCss?: true,
 
   } | false;
-
-  extend?: (vSelect: VueSelectConstructor, vueApp: App) => void | PromiseLike<void>
 }
