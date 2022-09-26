@@ -32,7 +32,7 @@
     "prepublishOnly": "run-s clear lint build",
     "release": "bumpp && pnpm publish",
     "test": "vitest",
-    "clear": "rm -rf dist && nuxi cleanup playground",
+    "clear": "rm -rf dist",
     "lint": "eslint \"{**/*,*}.{ts,tsx,vue}\" --fix",
     "postinstall": "nuxt-module-build --stub && nuxi prepare playground"
   },
