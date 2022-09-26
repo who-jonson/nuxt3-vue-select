@@ -34,7 +34,7 @@
     "test": "vitest",
     "clear": "rm -rf dist",
     "lint": "eslint \"{**/*,*}.{ts,tsx,vue}\" --fix",
-    "postinstall": "nuxt-module-build --stub && nuxi prepare playground"
+    "prepare": "nuxt-module-build --stub && nuxi prepare playground"
   },
   "dependencies": {
     "@nuxt/kit": "3.0.0-rc.11",
