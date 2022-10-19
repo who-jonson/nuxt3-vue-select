@@ -4,20 +4,12 @@ export default defineBuildConfig({
   clean: true,
   declaration: true,
   externals: [
-    'vue',
-    'scule',
-    'vue-demi',
     'vue-select'
   ],
   outDir: 'dist',
   rollup: {
-    emitCJS: false,
-    cjsBridge: true,
     commonjs: {
       include: /node_modules/
-    },
-    esbuild: {
-      treeShaking: true
     }
   },
   hooks: {
