@@ -1,6 +1,3 @@
-import type { App } from 'vue';
-import type { VueSelectConstructor } from 'vue-select';
-
 export interface ModuleOptions {
   component?: {
     /*
@@ -16,7 +13,7 @@ export interface ModuleOptions {
     /*
     * @default `true`
     **/
-    includeCss?: true,
+    includeCss?: true
 
   } | false;
 }

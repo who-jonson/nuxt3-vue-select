@@ -1,4 +1,4 @@
-import { addComponent, defineNuxtModule, resolveModule } from '@nuxt/kit';
+import { addComponent, defineNuxtModule } from '@nuxt/kit';
 import { kebabCase, pascalCase } from 'scule';
 import { name, version } from '../package.json';
 import type { ModuleOptions } from './options';
@@ -22,18 +22,16 @@ export default defineNuxtModule<ModuleOptions>({
   },
 
   async setup({ component }, nuxt) {
-    const componentPath = resolveModule('vue-select', {
-      paths: nuxt.options.modulesDir
-    });
+    nuxt.options.build.transpile.push('vue-select');
 
-    if (component && componentPath) {
+    if (component) {
       await addComponent({
-        name: pascalCase(component.as),
-        pascalName: pascalCase(component.as),
-        kebabName: kebabCase(component.as),
+        name: pascalCase(component.as!),
+        pascalName: pascalCase(component.as!),
+        kebabName: kebabCase(component.as!),
         chunkName: 'whoj__nuxt3-vue-select',
-        filePath: componentPath,
-        mode: 'all',
+        export: 'VueSelect',
+        filePath: 'vue-select',
         global: component.globalRegister
       });
 
