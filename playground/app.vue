@@ -3,7 +3,7 @@ import { debounce } from '@whoj/utils-core';
 
 const instance = getCurrentInstance();
 
-const options = ref<{ [p: string]: any, }[]>([]);
+const options = ref<{ [p: string]: any }[]>([]);
 
 const search = debounce(350, (loading, search, vm) => {
   fetch(
