@@ -1,6 +1,6 @@
 {
   "name": "@whoj/nuxt3-vue-select",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Nuxt 3 module for vue-select",
   "license": "MIT",
   "type": "module",
