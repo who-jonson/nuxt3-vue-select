@@ -29,7 +29,7 @@
     "build": "nuxt-module-build",
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
-    "prepublishOnly": "run-s clear lint build",
+    "prepack": "run-s clear lint build",
     "release": "bumpp && pnpm publish",
     "test": "vitest",
     "clear": "rm -rf dist",
